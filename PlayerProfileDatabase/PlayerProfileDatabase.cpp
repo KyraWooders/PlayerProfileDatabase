@@ -11,7 +11,7 @@ int main()
 {
 	Database data;
 	cout << "Input must lowercase." << endl;
-	cout << "Add, Display, Search, BinSearch(Binary Search), Save, Load, Sort" << endl;
+	cout << "Add, Display, Search, BinSearch(Binary Search), Save, Load, Sort, Quit" << endl;
 	data.TakeInput();
 }
 
