@@ -6,10 +6,12 @@ using namespace std;
 
 void Database::TakeInput()
 {
+	//while the program is running
 	while (!quit)
 	{
 		cin >> input;
 
+		//add a profile
 		if (strcmp(input, "add") == 0)
 		{
 			char playerName[30];
@@ -25,6 +27,7 @@ void Database::TakeInput()
 			Add(profile);
 		}
 		
+		//displays all of the profiles
 		if (strcmp(input, "display") == 0)
 		{
 			for (int i = 0; i < size; i++)
@@ -34,6 +37,7 @@ void Database::TakeInput()
 			}
 		}
 
+		//sorts all the profiles alphabetically
 		if (strcmp(input, "sort") == 0)
 		{
 			bool sorting = true;
@@ -59,16 +63,19 @@ void Database::TakeInput()
 			}
 		}
 
+		//saves profiles
 		if (strcmp(input, "save") == 0)
 		{
 			Save();
 		}
 
+		//loads saved profiles
 		if (strcmp(input, "load") == 0)
 		{
 			Load();
 		}
 
+		//search for profile
 		if (strcmp(input, "search") == 0)
 		{
 			cout << "Which profile would you like to search for?" << endl;
@@ -76,6 +83,7 @@ void Database::TakeInput()
 			Search(input);
 		}
 
+		//search with binary for a number
 		if (strcmp(input, "binsearch") == 0)
 		{
 			cout << "Insert a characters number to begin binary search." << endl;
@@ -84,6 +92,7 @@ void Database::TakeInput()
 			BinSearch(num);
 		}
 
+		//updates a profile
 		if (strcmp(input, "update") == 0)
 		{
 			cout << "Which profile would you like to update?" << endl;
@@ -103,6 +112,7 @@ void Database::TakeInput()
 			}
 		}
 
+		//quits the program
 		if (strcmp(input, "quit") == 0)
 		{
 			quit = true;
