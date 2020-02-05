@@ -2,6 +2,7 @@
 #include "Profile.h"
 #include <array>
 #include <string>
+#include <fstream>
 
 class Database
 {
@@ -28,7 +29,7 @@ private:
 	void BinSearch(int num);
 	void BinSearch(int num, int min, int max);
 
-	void Sort(Profile pro1, Profile pro2);
+	static bool Sort(Profile pro1, Profile pro2);
 
 	void Load();
 	void Save();

@@ -3,10 +3,16 @@
 
 #include "pch.h"
 #include <iostream>
+#include "Database.h"
+
+using namespace std;
 
 int main()
 {
-    
+	Database data;
+	cout << "Input must lowercase." << endl;
+	cout << "Add, Display, Search, BinSearch(Binary Search), Save, Load, Sort" << endl;
+	data.TakeInput();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
